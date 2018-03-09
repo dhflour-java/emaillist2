@@ -31,12 +31,12 @@ public class EmailListServlet extends HttpServlet {
 //			System.out.println( lastName );
 //			System.out.println( email );
 			
-			EmailListVo vo = new EmailListVo();
-			vo.setFirstName(firstName);
-			vo.setLastName(lastName);
-			vo.setEmail(email);
+//			EmailListVo vo = new EmailListVo();
+//			vo.setFirstName(firstName);
+//			vo.setLastName(lastName);
+//			vo.setEmail(email);
 			
-			new EmailListDao().insert(vo);
+			new EmailListDao().insert( new EmailListVo(0, firstName, lastName, email) );
 			
 			response.sendRedirect( "/emaillist2/el" );
 			
